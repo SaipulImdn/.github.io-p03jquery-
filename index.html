@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>p03css</title>
+    <style type="text/css">
+        body{
+            background-color: steelblue;
+            text-align: center;
+        }
+        table, th, td{
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        table{
+            border: transparent;
+        }
+        td{
+            background-color: midnightblue;
+            color: white;
+        }
+        th, td{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 30px;
+            padding-right: 40px;
+        }
+        table tbody tr:hover td{
+            background-color: steelblue;
+            border-color:black;
+            transisition: all .3s;
+        }
+    </style>
+</head>
+<body>  
+    <table style="margin-left: auto;margin-right: auto;">
+        <tr>
+            <th colspan="6" bgcolor="yellow">The Top 5 Of My Best Friends</th>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        </tr>    
+        <tr>
+            <td>No</td>
+            <td>Nim</td>
+            <td>Nama</td>
+            <td>Alamat</td>
+            <td colspan="2">Aksi</td>
+        </tr>
+    <body>
+        <tr id="row__1">
+            <td align="center">1</td>
+            <td class="nim">41215964</td>
+            <td class="nama_mhs">Rio Harsadino</td>
+            <td class="alamat">New York</td>
+            <td class="edit">Edit</td>
+            <td class="Delete" id=Delete__1>Delete</td>  
+        </tr>
+        <tr id="row__2">
+            <td align="center">2</td>
+            <td class="nim">41215905</td>
+            <td class="nama_mhs">Guruh Yoga Lianda Ibrahim</td>
+            <td class="alamat">Cirebon</td>
+            <td class="edit">Edit</td>
+            <td class="Delete" id=Delete__2>Delete</td>
+        </tr>
+        <tr id="row__3">
+            <td align="center">3</td>
+            <td class="nim">41215296</td>
+            <td class="nama_mhs">Bima Anugrah Djajanegara</td>
+            <td class="alamat">Kyiv</td>
+            <td class="edit">Edit</td>
+            <td class="Delete" id=Delete__3>Delete</td>
+        </tr>
+        <tr id="row__4">
+            <td align="center">4</td>
+            <td class="nim">41215908</td>
+            <td class="nama_mhs">Erinna Astiadewi</td>
+            <td class="alamat">Majalengka</td>
+            <td class="edit">Edit</td>
+            <td class="Delete" id=Delete__4>Delete</td>
+        </tr>
+        <tr id="row__5">
+            <td align="center">5</td>
+            <td class="nim">41215712</td>
+            <td class="nama_mhs">Selvi Andini</td>
+            <td class="alamat">Arumsari</td>
+            <td class="edit">Edit</td>
+            <td class="Delete" id=Delete__5>Delete</td>
+        </tr>
+        <tr id="row__6">
+            <td align="center">6</td>
+            <td class="nim">41215955</td>
+            <td class="nama_mhs">Faddz Abdul Aziz</td>
+            <td class="alamat">Gunung Jati</td>
+            <td class="edit">Edit</td>
+            <td class="Delete" id=Delete__6>Delete</td>
+        </tr>
+        <tr id="row__7">
+            <td align="center">7</td>
+            <td class="nim">41215362</td>
+            <td class="nama_mhs">Athar Hafizha Lutfi</td>
+            <td class="alamat">Cirebon</td>
+            <td class="edit">Edit</td>
+            <td class="Delete" id=Delete__7>Delete</td>
+        </tr>
+        <tr id="row__8">
+            <td align="center">8</td>
+            <td class="nim">41216023</td>
+            <td class="nama_mhs">Reza Saputra</td>
+            <td class="alamat">Cirebon</td>
+            <td class="edit">Edit</td>
+            <td class="Delete" id=Delete__8>Delete</td>
+        </tr>
+        <tr id="row__9">
+            <td align="center">9</td>
+            <td class="nim">41215905</td>
+            <td class="nama_mhs">Guruh Yoga Lianda Ibrahim</td>
+            <td class="alamat">Cirebon</td>
+            <td class="edit">Edit</td>
+            <td class="Delete" id=Delete__9>Delete</td>
+        </tr>
+        <tr id="row__10">
+            <td align="center">10</td>
+            <td class="nim">41215634</td>
+            <td class="nama_mhs">Ahmad Syaeful Ma'arief</td>
+            <td class="alamat">Arjawinangun</td>
+            <td class="edit">Edit</td>
+            <td class="Delete" id=Delete__10>Delete</td>
+        </tr>
+    <tbody>
+    </table>
+</body>
+<html>
+
+
+<script>
+    $(document).ready(function(){
+        //alert(0)
+        $('.nama_mhs').click(function(){
+            //alert(1)
+            let isi = $(this).text()
+            //alert(isi);
+
+            let isi2 = prompt('Mengubah Nama Dengan:', isi);
+            if(!isi2) return;
+            //alert(isi2);
+
+            $(this).text(isi2);
+        })
+
+        $('.nim').click(function(){
+            //alert(1)
+            let isi = $(this).text()
+            //alert(isi);
+
+            let isi2 = prompt('Mengubah NIM:', isi);
+            if(!isi2) return;
+
+            $(this).text(isi2);
+        })
+
+        $('.alamat').click(function(){
+            //alert(1)
+            let isi = $(this).text()
+            //alert(isi);
+
+            let isi2 = prompt('Mengubah Alamat:',isi);
+            if(!isi2) return;
+
+            $(this).text(isi2);
+        })
+
+        $('.edit').click(function(){
+            //alert(1)
+            let isi = $(this).text()
+            //alert(isi);
+
+            let isi2 = prompt('Yakin mau mengedit?',isi);
+            if(!isi2) return;
+
+            $(this).text(isi2);
+        })
+
+
+       
+        $('.Delete').click(function(){
+            //alert(isi);
+            let yakin = confirm('Yakin mau menghapus?');
+            if(!yakin) return;
+
+            let id = $(this).prop('id');
+            //alert(id);
+
+            let rid = id.split('__');
+            let baris_ke = rid[1];
+
+            //alert(baris_ke);
+
+            $('#row__'+baris_ke).slideUp()
+            
+            //alert('Kamu yakin')
+        })
+    })
+</script>
